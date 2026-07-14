@@ -145,6 +145,18 @@ Participants are responsible for complying with all applicable PhysioNet and MIM
 - Additional datasets, evaluation resources, and submission instructions may be released according to the Hidden-RAD2 schedule.
 - Participants should check this repository and the official challenge website regularly for updates.
 
+## Dataset Access
+
+The first 300 cases are publicly available in this repository as a
+sample dataset.
+
+Subsequent Task 1 datasets and formal-run data are available only to
+registered participants through the designated private distribution
+channel. Redistribution of participant-only data is not permitted.
+
+Please refer to the official Hidden-RAD2 website for the release
+schedule and access instructions.
+
 ## Challenge Information
 
 - [Hidden-RAD2 website](https://sites.google.com/view/hidden-rad2/)
