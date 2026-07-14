@@ -20,7 +20,8 @@ The first batch of **300 annotated cases** is available in this repository:
 
 - [`NTCIR19_Task1_Sample_1st.csv`](./NTCIR19_Task1_Sample_1st.csv)
 
-Each case contains identifiers for the corresponding MIMIC-CXR chest X-ray image and a radiologist-validated structured interpretation consisting of A1–A5.
+Each case contains identifiers for the corresponding MIMIC-CXR chest X-ray image and a radiologist-validated structured interpretation consisting of A1–A5. The first release contains 300 cases. Under the current annotation rule,
+77 cases have `-` in A4 and therefore represent a normal final conclusion.
 
 Chest X-ray image files are not redistributed through this repository. Participants must obtain the corresponding images directly from MIMIC-CXR with the required PhysioNet credentials and data-use authorization.
 
@@ -83,15 +84,22 @@ The released CSV file contains one case per row.
 
 | Column | Description |
 |---|---|
-| `Dir` | Relative directory of the corresponding MIMIC-CXR study |
-| `DICOM_name` | DICOM filename or filenames associated with the case |
-| `A1` | Initial impressions considered during image interpretation |
-| `A2` | Anatomical location of each finding |
-| `A3` | Relevant thoracic spine level or lung zone |
-| `A4` | Final diagnostic impressions |
-| `A5_1`–`A5_4` | Structured fields comprising the ABCDE-based confirmation checklist |
+| `Dir` | MIMIC-CXR directory containing the corresponding restricted source files |
+| `DICOM_name` | One or more DICOM filenames associated with the case |
+| `A1` | Initial impressions |
+| `A2` | Anatomical locations |
+| `A3` | Thoracic-level ranges |
+| `A4` | Final impressions; `-` indicates a normal final conclusion |
+| `A5_1`–`A5_4` | Confirmation-checklist items associated with final impressions |
 
-Some cases are associated with more than one chest X-ray image. In these cases, multiple filenames may appear in the `DICOM_name` field.
+The current CSV uses `-` to represent “none” or “not applicable.”
+Some fields contain quoted lists or structured values, and a case may
+reference multiple DICOM images. Use a standards-compliant CSV parser.
+
+For the complete data specification—including the 36-label vocabulary,
+normal-case encoding, anatomical-location structure, thoracic-level
+ranges, and the 28-item confirmation checklist—see
+[DATA_SCHEMA.md](./DATA_SCHEMA.md).
 
 ## Using the Released Data
 
