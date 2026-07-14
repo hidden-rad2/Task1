@@ -1,4 +1,4 @@
-# Hidden-RAD2 Task 1: Structured Radiological Reasoning Reconstruction
+# Hidden-RAD2 Task 1: Structured Radiological Reasoning Prediction
 
 This repository provides the dataset for **Task 1 of the NTCIR-19 Hidden-RAD2 challenge**.
 
