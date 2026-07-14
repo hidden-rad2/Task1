@@ -2,7 +2,13 @@
 
 This repository provides the dataset for **Task 1 of the NTCIR-19 Hidden-RAD2 challenge**.
 
-Hidden-RAD2 Task 1 evaluates whether an AI system can reproduce the structured reasoning process used by radiologists when interpreting chest X-ray images. Rather than generating only a final diagnosis or a free-text radiology report, the system must reconstruct the intermediate observations, anatomical information, diagnostic decisions, and supporting evidence that lead to each final impression.
+Hidden-RAD2 Task 1 evaluates whether an AI system can predict the
+radiologist-validated structured reasoning annotations associated with
+a chest X-ray image. Rather than predicting only a final diagnosis or
+generating a free-text radiology report, the system must predict the
+initial impressions, anatomical locations, thoracic levels or lung
+zones, final impressions, and confirmation evidence represented by
+A1–A5.
 
 For the official task description, see the [Hidden-RAD2 Task 1 Definition](https://sites.google.com/view/hidden-rad2/tasks/task-1-definition).
 
@@ -20,7 +26,8 @@ Chest X-ray image files are not redistributed through this repository. Participa
 
 ## Task Definition
 
-Given a chest X-ray image, a participating system must generate a structured **A1–A5 interpretation** representing the progression from initial observations to final diagnostic impressions and their supporting evidence.
+Given a chest X-ray image, a participating system must predict the
+corresponding radiologist-validated A1–A5 structured interpretation.
 
 The system must:
 
@@ -42,7 +49,7 @@ The corresponding medical report is used as a reference during dataset annotatio
 
 ## Required Output
 
-For each chest X-ray image, participants must generate the following structured output.
+For each chest X-ray image, participants must predict and submit the following structured output.
 
 ### A1 — Initial Impressions
 
